@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="categories">
+        <item>全部</item>
+        <item>默认分类</item>
+        <item>工作</item>
+        <item>生活</item>
+        <item>学习</item>
+        <item>其他</item>
+    </string-array>
+    <color name="amber_500">#FFC107</color>
+    <color name="black">#000000</color>
+    <color name="blue">#2196F3</color>
+    <color name="gray">#757575</color>
+    <color name="gray_f5">#F5F5F5</color>
+    <color name="gray_light">#E0E0E0</color>
+    <color name="ic_launcher_background">#2196F3</color>
+    <color name="teal_500">#009688</color>
+    <color name="teal_700">#00796B</color>
+    <color name="white">#FFFFFF</color>
+    <string name="app_name">NotePad记事本</string>
+    <string name="button_ok">确定</string>
+    <string name="edit_note_title">编辑笔记</string>
+    <string name="hint_note_content">输入内容</string>
+    <string name="hint_note_title">输入标题</string>
+    <string name="hint_search_note">输入标题或内容搜索笔记...</string>
+    <string name="live_folder_name">笔记文件夹</string>
+    <string name="menu_add">添加笔记</string>
+    <string name="menu_copy">复制</string>
+    <string name="menu_delete">删除</string>
+    <string name="menu_open">打开</string>
+    <string name="menu_paste">粘贴</string>
+    <string name="menu_revert">撤销</string>
+    <string name="menu_save">保存</string>
+    <style name="CustomEditText" parent="Widget.AppCompat.EditText">
+        <item name="android:background">@drawable/edittext_bg_round</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:lineSpacingExtra">4dp</item>
+    </style>
+    <style name="NoteEditorTheme" parent="NotePadTheme">
+        <item name="android:editTextStyle">@style/CustomEditText</item>
+    </style>
+    <style name="NotePadTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/teal_500</item>
+        <item name="colorPrimaryDark">@color/teal_700</item>
+        <item name="colorAccent">@color/amber_500</item>
+        <item name="android:windowBackground">@color/gray_f5</item>
+    </style>
+</resources>

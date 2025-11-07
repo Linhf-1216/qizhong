@@ -1,22 +1,44 @@
-apply plugin: 'com.android.application'
+plugins {
+    id 'com.android.application'
+}
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.1"
+    // 1. 核心修复：升级编译SDK到34（满足依赖库要求）
+    compileSdk 34
+    namespace "com.example.android.notepad" // 已配置的命名空间，保持不变
 
     defaultConfig {
         applicationId "com.example.android.notepad"
-        minSdkVersion 11
-        targetSdkVersion 11
-
-        testApplicationId "com.example.android.notepad.tests"
-        testInstrumentationRunner "android.test.InstrumentationTestRunner"
+        minSdk 23 // 兼容实验文档隐含的API 23模拟器
+        targetSdk 34 // 与compileSdk一致，适配Android 14
+        versionCode 2
+        versionName "1.1"
     }
 
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    // 2. 修复AGP警告：移除buildToolsVersion（AGP 8.0+自动匹配默认版本）
+    buildFeatures {
+        viewBinding true // 保留ViewBinding配置，确保布局绑定正常
+    }
+
+    // 3. 适配Java版本（避免语法兼容性问题）
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    // 4. 调整依赖版本：确保与compileSdk 34兼容
+    implementation 'androidx.appcompat:appcompat:1.7.0' // 升级到适配34的版本
+    implementation 'androidx.recyclerview:recyclerview:1.3.2'
+    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'androidx.core:core-ktx:1.13.0' // 升级到适配34的版本
 }

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="categories">
+        <item>全部</item>
+        <item>默认分类</item>
+        <item>工作</item>
+        <item>生活</item>
+        <item>学习</item>
+        <item>其他</item>
+    </string-array>
+</resources>

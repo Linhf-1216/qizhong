@@ -1,43 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2007 The Android Open Source Project
-
-     Licensed under the Apache License, Version 2.0 (the "License");
-     you may not use this file except in compliance with the License.
-     You may obtain a copy of the License at
-  
-          http://www.apache.org/licenses/LICENSE-2.0
-  
-     Unless required by applicable law or agreed to in writing, software
-     distributed under the License is distributed on an "AS IS" BASIS,
-     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-     See the License for the specific language governing permissions and
-     limitations under the License.
--->
-
 <resources>
-    <string name="app_name">NotePad</string>
-    <string name="live_folder_name">Notes</string>
+    <!-- 实验核心字符串（已存在，保留） -->
+    <string name="app_name">NotePad记事本</string>
+    <string name="menu_save">保存</string>
+    <string name="menu_delete">删除</string>
+    <string name="hint_note_title">输入标题</string>
+    <string name="hint_note_content">输入内容</string>
+    <string name="button_ok">确定</string>
 
-    <string name="title_edit_title">Note title:</string>
-    <string name="title_create">New note</string>
-    <string name="title_edit">Edit: %1$s</string>
-    <string name="title_notes_list">Notes</string>
+    <!-- 修复菜单文件缺失字符串 -->
+    <string name="menu_revert">撤销</string>
+    <string name="menu_open">打开</string>
+    <string name="menu_copy">复制</string>
+    <string name="menu_add">添加笔记</string>
+    <string name="menu_paste">粘贴</string>
+    <!-- 修复：动态文件夹名称（仅兼容编译，非文档核心） -->
+    <string name="live_folder_name">笔记文件夹</string>
+    <string name="edit_note_title">编辑笔记</string>
+    <string name="hint_search_note">输入标题或内容搜索笔记...</string>
+    <!-- 自定义主题 -->
+    <style name="NotePadTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/teal_500</item>
+        <item name="colorPrimaryDark">@color/teal_700</item>
+        <item name="colorAccent">@color/amber_500</item>
+        <item name="android:windowBackground">@color/gray_f5</item>
+    </style>
 
-    <string name="menu_add">New note</string>
-    <string name="menu_save">Save</string>
-    <string name="menu_delete">Delete</string>
-    <string name="menu_open">Open</string>
-    <string name="menu_revert">Revert changes</string>
-    <string name="menu_copy">Copy</string>
-    <string name="menu_paste">Paste</string>
+    <!-- 编辑器主题 -->
+    <style name="NoteEditorTheme" parent="NotePadTheme">
+        <item name="android:editTextStyle">@style/CustomEditText</item>
+    </style>
 
-    <string name="button_ok">OK</string>
-    <string name="text_title">Title:</string>
+    <!-- 自定义输入框样式 -->
+    <style name="CustomEditText" parent="Widget.AppCompat.EditText">
+        <item name="android:background">@drawable/edittext_bg_round</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:lineSpacingExtra">4dp</item>
+    </style>
 
-    <string name="resolve_edit">Edit note</string>
-    <string name="resolve_title">Edit title</string>
-
-    <string name="error_title">Error</string>
-    <string name="error_message">Error loading note</string>
-    <string name="nothing_to_save">There is nothing to save</string>
 </resources>

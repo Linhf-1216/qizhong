@@ -1,15 +1,16 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
     repositories {
-        jcenter()
+        google() // 优先配置Google仓库（用于Android相关依赖）
+        mavenCentral() // 替换jcenter()，使用Maven Central仓库
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.1.2'
+        classpath 'com.android.tools.build:gradle:8.13.0'// 保持与Gradle 4.5匹配的AGP版本
     }
 }
 
 allprojects {
     repositories {
-        jcenter()
+        google()
+        mavenCentral() // 替换jcenter()
     }
 }

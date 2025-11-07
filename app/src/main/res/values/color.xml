@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="blue">#2196F3</color> <!-- 主色：按钮、标题 -->
+    <color name="white">#FFFFFF</color> <!-- 背景：卡片、编辑框 -->
+    <color name="gray">#757575</color> <!-- 辅助色：时间戳、提示 -->
+    <color name="gray_light">#E0E0E0</color> <!-- 分割线、边框 -->
+    <color name="gray_f5">#F5F5F5</color> <!-- 页面背景 -->
+    <color name="black">#000000</color> <!-- 标题文本 -->
+    <color name="teal_500">#009688</color>
+    <color name="teal_700">#00796B</color>
+    <color name="amber_500">#FFC107</color>
+
+</resources>
