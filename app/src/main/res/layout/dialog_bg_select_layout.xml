@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- 第一行背景预览 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/zero"
+            android:layout_width="60dp"
+            android:layout_height="80dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/img_6"
+            android:contentDescription="@string/background"
+            android:onClick="ColorSelect"
+            android:scaleType="centerCrop"
+            />
+
+        <ImageView
+            android:id="@+id/one"
+            android:layout_width="60dp"
+            android:layout_height="80dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/img_5"
+            android:contentDescription="@string/background"
+            android:onClick="ColorSelect"
+            android:scaleType="centerCrop"
+            />
+
+        <ImageView
+            android:id="@+id/two"
+            android:layout_width="60dp"
+            android:layout_height="80dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/img_4"
+            android:contentDescription="@string/background"
+            android:onClick="ColorSelect"
+            android:scaleType="centerCrop"
+            />
+    </LinearLayout>
+
+    <!-- 第二行背景预览 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/three"
+            android:layout_width="60dp"
+            android:layout_height="80dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/img_3"
+            android:contentDescription="@string/background"
+            android:onClick="ColorSelect"
+            android:scaleType="centerCrop"
+            />
+
+        <ImageView
+            android:id="@+id/four"
+            android:layout_width="60dp"
+            android:layout_height="80dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/img_2"
+            android:contentDescription="@string/background"
+            android:onClick="ColorSelect"
+            android:scaleType="centerCrop"
+            />
+
+        <ImageView
+            android:id="@+id/five"
+            android:layout_width="60dp"
+            android:layout_height="80dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/img_1"
+            android:contentDescription="@string/background"
+            android:onClick="ColorSelect"
+            android:scaleType="centerCrop"
+            />
+
+        <ImageView
+            android:id="@+id/six"
+            android:layout_width="60dp"
+            android:layout_height="80dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/img"
+            android:contentDescription="@string/background"
+            android:onClick="ColorSelect"
+            android:scaleType="centerCrop"
+            />
+    </LinearLayout>
+</LinearLayout>

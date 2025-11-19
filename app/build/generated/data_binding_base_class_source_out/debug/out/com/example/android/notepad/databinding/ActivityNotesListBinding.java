@@ -32,14 +32,19 @@ public final class ActivityNotesListBinding implements ViewBinding {
   public final ListView list;
 
   @NonNull
+  public final LinearLayout llNoteList;
+
+  @NonNull
   public final Spinner spinnerCategory;
 
   private ActivityNotesListBinding(@NonNull LinearLayout rootView, @NonNull Button btnSearch,
-      @NonNull EditText etSearchNote, @NonNull ListView list, @NonNull Spinner spinnerCategory) {
+      @NonNull EditText etSearchNote, @NonNull ListView list, @NonNull LinearLayout llNoteList,
+      @NonNull Spinner spinnerCategory) {
     this.rootView = rootView;
     this.btnSearch = btnSearch;
     this.etSearchNote = etSearchNote;
     this.list = list;
+    this.llNoteList = llNoteList;
     this.spinnerCategory = spinnerCategory;
   }
 
@@ -88,6 +93,8 @@ public final class ActivityNotesListBinding implements ViewBinding {
         break missingId;
       }
 
+      LinearLayout llNoteList = (LinearLayout) rootView;
+
       id = R.id.spinner_category;
       Spinner spinnerCategory = ViewBindings.findChildViewById(rootView, id);
       if (spinnerCategory == null) {
@@ -95,7 +102,7 @@ public final class ActivityNotesListBinding implements ViewBinding {
       }
 
       return new ActivityNotesListBinding((LinearLayout) rootView, btnSearch, etSearchNote, list,
-          spinnerCategory);
+          llNoteList, spinnerCategory);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

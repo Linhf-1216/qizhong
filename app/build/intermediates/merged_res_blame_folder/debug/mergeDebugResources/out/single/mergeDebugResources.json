@@ -4,6 +4,10 @@
         "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.13\\com.example.android.notepad.app-main-34:\\layout\\activity_note_editor.xml"
     },
     {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.13\\com.example.android.notepad.app-debug-32:\\drawable_img_6.png.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.13\\com.example.android.notepad.app-main-34:\\drawable\\img_6.png"
+    },
+    {
         "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.13\\com.example.android.notepad.app-debug-32:\\menu_editor_options_menu.xml.flat",
         "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.13\\com.example.android.notepad.app-main-34:\\menu\\editor_options_menu.xml"
     },
@@ -28,6 +32,10 @@
         "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.13\\com.example.android.notepad.app-main-34:\\drawable\\bg_3.xml"
     },
     {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.13\\com.example.android.notepad.app-debug-32:\\drawable_img_2.png.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.13\\com.example.android.notepad.app-main-34:\\drawable\\img_2.png"
+    },
+    {
         "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.13\\com.example.android.notepad.app-debug-32:\\drawable_ic_menu_delete.png.flat",
         "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.13\\com.example.android.notepad.app-main-34:\\drawable\\ic_menu_delete.png"
     },
@@ -40,12 +48,20 @@
         "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.13\\com.example.android.notepad.app-main-34:\\drawable-hdpi\\ic_menu_save.png"
     },
     {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.13\\com.example.android.notepad.app-debug-32:\\layout_title_editor.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.13\\com.example.android.notepad.app-main-34:\\layout\\title_editor.xml"
+    },
+    {
         "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.13\\com.example.android.notepad.app-debug-32:\\mipmap-xxhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.13\\com.example.android.notepad.app-main-34:\\mipmap-xxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.13\\com.example.android.notepad.app-debug-32:\\layout_title_editor.xml.flat",
-        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.13\\com.example.android.notepad.app-main-34:\\layout\\title_editor.xml"
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.13\\com.example.android.notepad.app-debug-32:\\drawable_img.png.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.13\\com.example.android.notepad.app-main-34:\\drawable\\img.png"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.13\\com.example.android.notepad.app-debug-32:\\drawable_img_3.png.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.13\\com.example.android.notepad.app-main-34:\\drawable\\img_3.png"
     },
     {
         "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.13\\com.example.android.notepad.app-debug-32:\\drawable_ic_launcher_foreground.xml.flat",
@@ -60,12 +76,16 @@
         "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.13\\com.example.android.notepad.app-main-34:\\mipmap-xxhdpi\\ic_launcher_round.webp"
     },
     {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.13\\com.example.android.notepad.app-debug-32:\\layout_activity_notes_list.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.13\\com.example.android.notepad.app-main-34:\\layout\\activity_notes_list.xml"
+    },
+    {
         "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.13\\com.example.android.notepad.app-debug-32:\\mipmap-hdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.13\\com.example.android.notepad.app-main-34:\\mipmap-hdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.13\\com.example.android.notepad.app-debug-32:\\layout_activity_notes_list.xml.flat",
-        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.13\\com.example.android.notepad.app-main-34:\\layout\\activity_notes_list.xml"
+        "merged": "com.example.android.notepad.app-debug-32:/layout_note_list_item.xml.flat",
+        "source": "com.example.android.notepad.app-main-34:/layout/note_list_item.xml"
     },
     {
         "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.13\\com.example.android.notepad.app-debug-32:\\drawable-hdpi_ic_menu_compose.png.flat",
@@ -94,6 +114,10 @@
     {
         "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.13\\com.example.android.notepad.app-debug-32:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.13\\com.example.android.notepad.app-main-34:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.13\\com.example.android.notepad.app-debug-32:\\drawable_img_4.png.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.13\\com.example.android.notepad.app-main-34:\\drawable\\img_4.png"
     },
     {
         "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.13\\com.example.android.notepad.app-debug-32:\\menu_list_options_menu.xml.flat",
@@ -140,10 +164,6 @@
         "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.13\\com.example.android.notepad.app-main-34:\\mipmap-hdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.android.notepad.app-debug-32:/layout_activity_notes_list.xml.flat",
-        "source": "com.example.android.notepad.app-main-34:/layout/activity_notes_list.xml"
-    },
-    {
         "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.13\\com.example.android.notepad.app-debug-32:\\drawable_edittext_bg.xml.flat",
         "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.13\\com.example.android.notepad.app-main-34:\\drawable\\edittext_bg.xml"
     },
@@ -164,6 +184,10 @@
         "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.13\\com.example.android.notepad.app-main-34:\\drawable\\circle.xml"
     },
     {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.13\\com.example.android.notepad.app-debug-32:\\drawable_img_5.png.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.13\\com.example.android.notepad.app-main-34:\\drawable\\img_5.png"
+    },
+    {
         "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.13\\com.example.android.notepad.app-debug-32:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.13\\com.example.android.notepad.app-main-34:\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
@@ -174,6 +198,14 @@
     {
         "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.13\\com.example.android.notepad.app-debug-32:\\drawable_bg_image_1.png.flat",
         "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.13\\com.example.android.notepad.app-main-34:\\drawable\\bg_image_1.png"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.13\\com.example.android.notepad.app-debug-32:\\layout_dialog_bg_select_layout.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.13\\com.example.android.notepad.app-main-34:\\layout\\dialog_bg_select_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.13\\com.example.android.notepad.app-debug-32:\\drawable_img_1.png.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.13\\com.example.android.notepad.app-main-34:\\drawable\\img_1.png"
     },
     {
         "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.13\\com.example.android.notepad.app-debug-32:\\menu_list_context_menu.xml.flat",

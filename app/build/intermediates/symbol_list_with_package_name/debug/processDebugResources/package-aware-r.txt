@@ -2953,6 +2953,13 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_search_black_24
+drawable img
+drawable img_1
+drawable img_2
+drawable img_3
+drawable img_4
+drawable img_5
+drawable img_6
 drawable indeterminate_static
 drawable live_folder_notes
 drawable m3_avd_hide_password
@@ -3098,7 +3105,7 @@ id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
 id action_text
-id action_theme_switch
+id action_theme
 id actions
 id activity_chooser_view_content
 id add
@@ -3210,10 +3217,12 @@ id fitEnd
 id fitStart
 id fitToContents
 id fitXY
+id five
 id fixed
 id flip
 id floating
 id forever
+id four
 id fragment_container_view_tag
 id fullscreen_header
 id ghost_view
@@ -3255,6 +3264,7 @@ id line3
 id linear
 id listMode
 id list_item
+id ll_noteList
 id m3_side_sheet
 id marquee
 id masked
@@ -3334,6 +3344,7 @@ id notification_main_column
 id notification_main_column_container
 id off
 id on
+id one
 id open_search_bar_text_view
 id open_search_view_background
 id open_search_view_clear_button
@@ -3407,6 +3418,7 @@ id showCustom
 id showHome
 id showTitle
 id sin
+id six
 id skipCollapsed
 id slide
 id snackbar_action
@@ -3465,6 +3477,7 @@ id textinput_helper_text
 id textinput_placeholder
 id textinput_prefix_text
 id textinput_suffix_text
+id three
 id time
 id title
 id titleDividerNoCustom
@@ -3486,6 +3499,7 @@ id transition_scene_layoutid_cache
 id transition_transform
 id triangle
 id tv_note_timestamp
+id two
 id unchecked
 id uniform
 id unlabeled
@@ -3503,6 +3517,7 @@ id with_icon
 id withinBounds
 id wrap
 id wrap_content
+id zero
 integer abc_config_activityDefaultDur
 integer abc_config_activityShortDur
 integer app_bar_elevation_anim_duration
@@ -3635,6 +3650,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout dialog_bg_select_layout
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
 layout m3_alert_dialog
@@ -3734,9 +3750,11 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string action_theme
 string androidx_startup
 string app_name
 string appbar_scrolling_view_behavior
+string background
 string bottom_sheet_behavior
 string bottomsheet_action_collapse
 string bottomsheet_action_expand

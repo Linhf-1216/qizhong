@@ -18,6 +18,9 @@
     <string name="live_folder_name">笔记文件夹</string>
     <string name="edit_note_title">编辑笔记</string>
     <string name="hint_search_note">输入标题或内容搜索笔记...</string>
+    <!-- 在现有strings.xml中添加 -->
+    <string name="background">背景</string>
+    <string name="action_theme">切换背景</string>
     <!-- 自定义主题 -->
     <style name="NotePadTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/teal_500</item>

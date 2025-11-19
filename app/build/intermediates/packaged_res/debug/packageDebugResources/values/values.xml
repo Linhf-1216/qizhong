@@ -21,7 +21,9 @@
     <color name="teal_500">#009688</color>
     <color name="teal_700">#00796B</color>
     <color name="white">#FFFFFF</color>
+    <string name="action_theme">切换背景</string>
     <string name="app_name">NotePad记事本</string>
+    <string name="background">背景</string>
     <string name="button_ok">确定</string>
     <string name="edit_note_title">编辑笔记</string>
     <string name="hint_note_content">输入内容</string>

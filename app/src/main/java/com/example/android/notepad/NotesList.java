@@ -6,21 +6,26 @@ import android.app.ListActivity;
 import android.content.ContentUris;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.BaseColumns;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.inputmethod.EditorInfo;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.Spinner;
@@ -43,6 +48,14 @@ public class NotesList extends ListActivity {
             NotePad.Notes.COLUMN_NAME_CREATED_TIME
     };
 
+    // 新增：背景布局和列表视图引用
+    private LinearLayout ll_noteList;
+    private ListView lv_notesList;
+    private AlertDialog bgSelectDialog;
+    // 新增：SP存储相关
+    private static final String PREF_NAME = "theme_prefs";
+    private static final String KEY_SELECTED_BG = "selected_bg";
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
 
@@ -50,6 +63,10 @@ public class NotesList extends ListActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notes_list);
 
+        ll_noteList = findViewById(R.id.ll_noteList); // 需给根布局设置id:ll_noteList
+        lv_notesList = findViewById(android.R.id.list); // 列表视图
+        // 新增：加载保存的背景
+        loadSavedBackground();
         // 初始化控件
         etSearch = findViewById(R.id.et_search_note);
         btnSearch = findViewById(R.id.btn_search);
@@ -238,6 +255,79 @@ public class NotesList extends ListActivity {
             startActivity(new Intent(this, NoteEditor.class));
             return true;
         }
+        // 新增：主题切换按钮点击
+        else if (item.getItemId() == R.id.action_theme) {
+            showpopSelectBgWindows();
+            return true;
+        }
         return super.onOptionsItemSelected(item);
+    }
+
+    // 新增：加载保存的背景
+    private void loadSavedBackground() {
+        SharedPreferences sp = getSharedPreferences(PREF_NAME, MODE_PRIVATE);
+        int savedBgId = sp.getInt(KEY_SELECTED_BG, -1);
+        if (savedBgId != -1) {
+            Drawable bg = getResources().getDrawable(savedBgId, getTheme());
+            ll_noteList.setBackground(bg);
+            lv_notesList.setBackground(bg);
+        }
+    }
+
+    // 新增：保存背景选择
+    private void saveBackground(int resId) {
+        SharedPreferences sp = getSharedPreferences(PREF_NAME, MODE_PRIVATE);
+        sp.edit().putInt(KEY_SELECTED_BG, resId).apply();
+    }
+
+    // 新增：显示背景选择对话框
+    private void showpopSelectBgWindows() {
+        LayoutInflater inflater = LayoutInflater.from(this);
+        View view = inflater.inflate(R.layout.dialog_bg_select_layout, null);
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("选择背景");
+        builder.setView(view);
+        bgSelectDialog = builder.create();
+        bgSelectDialog.show();
+    }
+
+    // 实现背景选择点击事件
+    public void ColorSelect(View view) {
+        int bgResId = -1;
+        switch (view.getId()) {
+            case R.id.zero:
+                bgResId = R.drawable.img_6;
+                break;
+            case R.id.one:
+                bgResId = R.drawable.img_5;
+                break;
+            case R.id.two:
+                bgResId = R.drawable.img_4;
+                break;
+            case R.id.three:
+                bgResId = R.drawable.img_3;
+                break;
+            case R.id.four:
+                bgResId = R.drawable.img_2;
+                break;
+            case R.id.five:
+                bgResId = R.drawable.img_1;
+                break;
+            case R.id.six:
+                bgResId = R.drawable.img;
+                break;
+        }
+
+        if (bgResId != -1) {
+            Drawable bg = getResources().getDrawable(bgResId, getTheme());
+            ll_noteList.setBackground(bg);
+            lv_notesList.setBackground(bg);
+            saveBackground(bgResId);
+
+            // 修复：直接关闭成员变量持有的对话框
+            if (bgSelectDialog != null && bgSelectDialog.isShowing()) {
+                bgSelectDialog.dismiss();
+            }
+        }
     }
 }

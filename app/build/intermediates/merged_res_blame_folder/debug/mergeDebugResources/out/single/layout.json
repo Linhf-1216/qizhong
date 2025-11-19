@@ -4,10 +4,6 @@
         "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.13\\com.example.android.notepad.app-main-34:\\layout\\activity_notes_list.xml"
     },
     {
-        "merged": "com.example.android.notepad.app-mergeDebugResources-31:/layout/activity_notes_list.xml",
-        "source": "com.example.android.notepad.app-main-34:/layout/activity_notes_list.xml"
-    },
-    {
         "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.13\\com.example.android.notepad.app-mergeDebugResources-31:\\layout\\activity_note_editor.xml",
         "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.13\\com.example.android.notepad.app-main-34:\\layout\\activity_note_editor.xml"
     },
@@ -16,7 +12,15 @@
         "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.13\\com.example.android.notepad.app-main-34:\\layout\\note_list_item.xml"
     },
     {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.13\\com.example.android.notepad.app-mergeDebugResources-31:\\layout\\dialog_bg_select_layout.xml",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.13\\com.example.android.notepad.app-main-34:\\layout\\dialog_bg_select_layout.xml"
+    },
+    {
         "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.13\\com.example.android.notepad.app-mergeDebugResources-31:\\layout\\title_editor.xml",
         "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.13\\com.example.android.notepad.app-main-34:\\layout\\title_editor.xml"
+    },
+    {
+        "merged": "com.example.android.notepad.app-mergeDebugResources-31:/layout/note_list_item.xml",
+        "source": "com.example.android.notepad.app-main-34:/layout/note_list_item.xml"
     }
 ]

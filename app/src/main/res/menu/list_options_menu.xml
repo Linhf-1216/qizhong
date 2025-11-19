@@ -10,8 +10,9 @@
 
     <!-- 主题切换菜单 -->
     <item
-        android:id="@+id/action_theme_switch"
+        android:id="@+id/action_theme"
         android:title="切换主题"
         android:icon="@android:drawable/ic_menu_preferences"
         app:showAsAction="never" />
+
 </menu>
