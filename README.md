@@ -401,8 +401,8 @@
 **截图展示**：
 ![主题切换功能](screenshoot/菜单界面.png)
 ![主题切换功能](screenshoot/主题预选.png)
-![主题切换功能](screenshot/主题切换成功.png)
-![主题切换功能](screenshot/主题切换成功2.png)
+![主题切换功能](screenshoot/主题切换成功.png)
+![主题切换功能](screenshoot/主题切换成功2.png)
 
 ---
 
