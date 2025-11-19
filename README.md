@@ -174,7 +174,7 @@
     - 长按列表项或点击编辑页菜单可删除笔记，删除前有确认提示。
 
 **截图展示**：  
-![基础笔记操作](screenshoot/添加笔记.png)
+![基础笔记操作](screenshoot/菜单界面.png)
 ![基础笔记操作](screenshoot/编辑笔记页面.png)
 ![基础笔记操作](screenshoot/保存.png)
 ![基础笔记操作](screenshoot/删除.png)
@@ -215,6 +215,194 @@
 ![分类功能](screenshoot/按种类分笔记.png)
 ![分类功能](screenshoot/编辑笔记页面.png)
 ![分类功能](screenshoot/a.png)
+
+---
+### 5. **UI 美化（扩展）**
+- **功能描述**：支持用户选择不同背景主题，优化笔记列表界面视觉体验，背景切换不影响笔记列表项显示。
+- **实现思路**：
+    - 通过弹出对话框展示背景预览图，用户点击即可切换笔记列表底层背景。
+    - 背景选择状态持久化保存，应用重启后保持用户偏好设置。
+    - 列表项采用白色保持独立样式，与底层背景区分，确保内容可读性。
+- **核心代码**：
+  ```java
+  // 显示背景选择对话框
+    private void showpopSelectBgWindows() {
+        LayoutInflater inflater = LayoutInflater.from(this);
+        View view = inflater.inflate(R.layout.dialog_bg_select_layout, null);
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("选择背景");//设置标题
+        builder.setView(view);
+        // 保存对话框实例用于关闭
+        bgSelectDialog = builder.create();
+        bgSelectDialog.show();//显示对话框
+    }
+  ```
+  - 自定义主题样式：
+  ```xml
+      <?xml version="1.0" encoding="utf-8"?>
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+    
+        <!-- 第一行背景预览 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+    
+            <ImageView
+                android:id="@+id/zero"
+                android:layout_width="60dp"
+                android:layout_height="80dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/bg_image_6"
+                android:contentDescription="@string/background"
+                android:onClick="ColorSelect"
+                android:scaleType="centerCrop"/>
+    
+            <ImageView
+                android:id="@+id/one"
+                android:layout_width="60dp"
+                android:layout_height="80dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/bg_image_5"
+                android:contentDescription="@string/background"
+                android:onClick="ColorSelect"
+                android:scaleType="centerCrop"/>
+    
+            <ImageView
+                android:id="@+id/two"
+                android:layout_width="60dp"
+                android:layout_height="80dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/bg_image_4"
+                android:contentDescription="@string/background"
+                android:onClick="ColorSelect"
+                android:scaleType="centerCrop"/>
+        </LinearLayout>
+    
+        <!-- 第二行背景预览 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+    
+            <ImageView
+                android:id="@+id/three"
+                android:layout_width="60dp"
+                android:layout_height="80dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/bg_image_3"
+                android:contentDescription="@string/background"
+                android:onClick="ColorSelect"
+                android:scaleType="centerCrop"/>
+    
+            <ImageView
+                android:id="@+id/four"
+                android:layout_width="60dp"
+                android:layout_height="80dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/bg_image_2"
+                android:contentDescription="@string/background"
+                android:onClick="ColorSelect"
+                android:scaleType="centerCrop"/>
+    
+            <ImageView
+                android:id="@+id/five"
+                android:layout_width="60dp"
+                android:layout_height="80dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/bg_image_1"
+                android:contentDescription="@string/background"
+                android:onClick="ColorSelect"
+                android:scaleType="centerCrop"/>
+    
+            <ImageView
+                android:id="@+id/six"
+                android:layout_width="60dp"
+                android:layout_height="80dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/bg_image"
+                android:contentDescription="@string/background"
+                android:onClick="ColorSelect"
+                android:scaleType="centerCrop"/>
+        </LinearLayout>
+    </LinearLayout>
+  ```
+ - 背景改变监听器：
+ ```java
+   // 背景选择点击事件
+ public void ColorSelect(View view) {
+     int bgResId = -1;
+     switch (view.getId()) {
+         case R.id.zero:
+             bgResId = R.drawable.bg_image_6;
+             break;
+         case R.id.one:
+             bgResId = R.drawable.bg_image_5;
+             break;
+         case R.id.two:
+             bgResId = R.drawable.bg_image_4;
+             break;
+         case R.id.three:
+             bgResId = R.drawable.bg_image_3;
+             break;
+         case R.id.four:
+             bgResId = R.drawable.bg_image_2;
+             break;
+         case R.id.five:
+             bgResId = R.drawable.bg_image_1;
+             break;
+         case R.id.six:
+             bgResId = R.drawable.bg_image;
+             break;
+     }
+
+     if (bgResId != -1) {
+         // 设置底层背景
+         Drawable bg = getResources().getDrawable(bgResId, getTheme());
+         ll_noteList.setBackground(bg);
+         lv_notesList.setBackground(bg);
+         // 保存选择到本地
+         saveBackground(bgResId);
+         // 关闭对话框
+         if (bgSelectDialog != null && bgSelectDialog.isShowing()) {
+             bgSelectDialog.dismiss();
+         }
+     }
+ }
+
+ // 保存背景选择状态
+ private void saveBackground(int resId) {
+     getSharedPreferences(PREF_NAME, MODE_PRIVATE)
+         .edit()
+         .putInt(KEY_SELECTED_BG, resId)
+         .apply();
+ }
+
+ // 初始化时加载保存的背景
+ private void loadSavedBackground() {
+     SharedPreferences sp = getSharedPreferences(PREF_NAME, MODE_PRIVATE);
+     int savedBgRes = sp.getInt(KEY_SELECTED_BG, R.drawable.bg_image_6);
+     Drawable bg = getResources().getDrawable(savedBgRes, getTheme());
+     ll_noteList.setBackground(bg);
+     lv_notesList.setBackground(bg);
+ }
+  ```
+
+- **效果展示**：
+    - 用户可通过对话框预览并选择不同背景图，列表项保持独立样式，底层背景动态切换。
+    - 背景选择自动保存，下次打开应用无需重新设置。
+
+**截图展示**：
+![主题切换功能](screenshoot/菜单界面.png)
+![主题切换功能](screenshoot/主题预选.png)
+![主题切换功能](screenshot/主题切换成功(1).png)
+![主题切换功能](screenshot/主题切换成功(2).png)
 
 ---
 
