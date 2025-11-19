@@ -1269,6 +1269,7 @@ color abc_tint_spinner
 color abc_tint_switch_track
 color accent_material_dark
 color accent_material_light
+color amber_400
 color amber_500
 color androidx_core_ripple_material_light
 color androidx_core_secondary_text_default_material_light
@@ -1339,6 +1340,8 @@ color error_color_material_light
 color foreground_material_dark
 color foreground_material_light
 color gray
+color gray_800
+color gray_900
 color gray_f5
 color gray_light
 color highlighted_text_material_dark
@@ -3095,6 +3098,7 @@ id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
 id action_text
+id action_theme_switch
 id actions
 id activity_chooser_view_content
 id add

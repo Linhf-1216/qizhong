@@ -1,10 +1,13 @@
 R_DEF: Internal format may change without notice
 local
 array categories
+color amber_400
 color amber_500
 color black
 color blue
 color gray
+color gray_800
+color gray_900
 color gray_f5
 color gray_light
 color ic_launcher_background
@@ -25,6 +28,7 @@ drawable live_folder_notes
 drawable note_item_bg
 drawable search_bar_bg
 id action_add_note
+id action_theme_switch
 id btn_ok
 id btn_save
 id btn_search

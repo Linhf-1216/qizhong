@@ -5,7 +5,6 @@ import android.app.AlertDialog;
 import android.app.ListActivity;
 import android.content.ContentUris;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
@@ -46,6 +45,8 @@ public class NotesList extends ListActivity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notes_list);
 

@@ -6,5 +6,12 @@
         android:id="@+id/action_add_note"
         android:title="添加笔记"
         android:icon="@android:drawable/ic_menu_add"
-        app:showAsAction="always" />
+        app:showAsAction="never" />
+
+    <!-- 主题切换菜单 -->
+    <item
+        android:id="@+id/action_theme_switch"
+        android:title="切换主题"
+        android:icon="@android:drawable/ic_menu_preferences"
+        app:showAsAction="never" />
 </menu>
